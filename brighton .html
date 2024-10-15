@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brighton</title>
+    <link rel="stylesheet" href="CSS/master.css">
+    <style>
+        .brphoto {
+            background-color: gainsboro;
+            margin: 5px 0.1rem 0;
+            border-radius: 4px;
+            height: 100px;
+            border-right: 10px solid #0057B8;
+            border-left: 10px solid #0057B8;
+        }
+
+        .brh1 {
+            margin: -70px 0 0;
+            text-align: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .discord {
+            color: white;
+            width: fit-content;
+            border-radius: 4px;
+            margin: -95px 16px 0;
+            text-decoration: none;
+            float: right;
+        }
+
+        .captin-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 25px 0;
+        }
+
+        .captin {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            border: 2px solid silver;
+            background-color: gainsboro;
+            padding: 1px;
+            border-radius: 4px;
+            margin-left: 100px;
+            border-right: 4px solid #0057B8;
+        }
+
+        .captin label {
+            font-size: large;
+            margin-right: 5px;
+        }
+
+        .captin input {
+            font-size: large;
+            width: 100px;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 0;
+            border-radius: 4px;
+        }
+
+        .players {
+            font-size: large;
+            text-align: left;
+            margin: 10px 0;
+            align-self: flex-start;
+            color: white;
+        }
+
+        .atk {
+            font-size: 35%;
+            text-align: left;
+            margin: 10px 89px;
+            align-self: flex-start;
+            background: #bb2419;
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 5px;
+            padding-left: 25px;
+            width: 120px;
+        }
+
+        .ddef {
+            font-size: 35%;
+            text-align: center;
+            margin: 10px 300px;
+            background: #11abe3;
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 5px;
+            padding-left: 25px;
+            width: 120px;
+            display: inline;
+            margin-bottom: 20px;
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        .def {
+            font-size: 35%;
+            text-align: left;
+            margin: 10px 89px;
+            align-self: flex-start;
+            background: #11abe3;
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 5px;
+            padding-left: 25px;
+            width: 120px;
+            display: inline;
+            margin-top: -73px;
+            margin-left: 521px;
+            align-items: center;
+        }
+
+        .gk {
+            font-size: 35%;
+            text-align: left;
+            margin: 10px 89px;
+            align-self: flex-start;
+            background: #d0c200;
+            color: aliceblue;
+            border-radius: 50px;
+            padding: 5px;
+            padding-left: 25px;
+            width: 120px;
+            display: inline;
+            margin-top: -74px;
+            margin-left: 973px;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .tamer {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://64.media.tumblr.com/ae90f362f423ffab360b123680a3a4d6/tumblr_pson8fmbE31rpz8s2o6_400.gifv);
+            background-position: center;
+            background-size: cover;
+            width: 282px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 2rem;
+        }
+
+        .tamer label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer input {
+            font-size: small;
+            width: 68px;
+            margin-right: 17px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .den {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://assets.goal.com/images/v3/bltb9c1555d420b1d87/GOAL%20-%20Blank%20WEB%20-%20Facebook%20-%202024-08-18T185849.997.png?auto=webp&format=pjpg&width=1080&quality=60);
+            background-position: center;
+            background-size: cover;
+            width: 282px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 2rem;
+        }
+
+        .den label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .den input {
+            font-size: small;
+            width: 68px;
+            margin-right: 17px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .den input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .sto {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://assets.goal.com/images/v3/blt224aff345ee0a0d7/crop/MM5DGMRQGA5DCOBQGA5G433XMU5DCORQ/GettyImages-2000214517.jpg?auto=webp&format=pjpg&width=1080&quality=60);
+            background-position: center;
+            background-size: cover;
+            width: 282px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 2rem;
+        }
+
+        .sto label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .sto input {
+            font-size: small;
+            width: 68px;
+            margin-right: 17px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .sto input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+
+        .tamer1 {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://legendysportu.pl/wp-content/uploads/2024/06/Paolo-Maldini.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 432px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            margin-left: 373px;
+            position: absolute;
+            top: 356px;
+        }
+
+        .tamer1 label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer1 input {
+            font-size: small;
+            width: 68px;
+            margin-right: 30px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer1 input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .tamer12 {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F1012%2Fr759818_1296x729_16%2D9.jpg&w=570&format=jpg);
+            background-position: center;
+            background-size: cover;
+            width: 432px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 373px;
+            position: absolute;
+            top: 518px;
+        }
+
+        .tamer12 label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer12 input {
+            font-size: small;
+            width: 68px;
+            margin-right: 30px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer12 input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .tamer13 {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/4737/live/52b17cf0-4a99-11ef-b7e5-29f47be8e120.jpg.webp);
+            background-position: center;
+            background-size: cover;
+            width: 432px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 373px;
+            position: absolute;
+            top: 680px;
+        }
+
+        .tamer13 label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer13 input {
+            font-size: small;
+            width: 68px;
+            margin-right: 30px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer13 input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .tamer14 {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://assets.goal.com/images/v3/blt76340e470190b797/GettyImages-1610362030.jpg?auto=webp&format=pjpg&width=1080&quality=60);
+            background-position: center;
+            background-size: cover;
+            width: 432px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 373px;
+            position: absolute;
+            top: 842px;
+        }
+
+        .tamer14 label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer14 input {
+            font-size: small;
+            width: 68px;
+            margin-right: 30px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer14 input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+
+        .tamer2 {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://icdn.football-espana.net/wp-content/uploads/2023/12/Marc-Andre-ter-Stegen-770x513.jpg.webp);
+            background-position: center;
+            background-size: cover;
+            width: 348px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 54rem;
+            position: absolute;
+            top: 356px;
+        }
+
+        .tamer2 label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamer2 input {
+            font-size: small;
+            width: 68px;
+            margin-right: 39px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamer2 input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .tamerb {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://assets.goal.com/images/v3/blt6a9ee00bb5b3b156/2152970887%202.jpg?auto=webp&format=pjpg&width=1080&quality=60);
+            background-position: center;
+            background-size: cover;
+            width: 348px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 54rem;
+            position: absolute;
+            top: 518px;
+        }
+
+        .tamerb label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamerb input {
+            font-size: small;
+            width: 68px;
+            margin-right: 39px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamerb input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        .tamerg {
+            text-align: left;
+            align-self: flex-start;
+            background-color: gainsboro;
+            background-image: url(https://e0.365dm.com/21/11/1600x900/skysports-alisson-becker-liverpool_5581581.jpg?20211113131149);
+            background-position: center;
+            background-size: cover;
+            width: 348px;
+            border-right: 10px solid #0057B8;
+            padding: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 54rem;
+            position: absolute;
+            top: 680px;
+        }
+
+        .tamerg label {
+            margin-right: 1%;
+            color: #ffffff;
+            text-shadow:
+                1px 1px 0 black,
+                -1px -1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black;
+            /* تأثير الحدود */
+        }
+
+        .tamerg input {
+            font-size: small;
+            width: 68px;
+            margin-right: 39px;
+            border-radius: 20px;
+            border: 0 solid black;
+            border-bottom: 5px solid black;
+            text-align: center;
+            font-size: large;
+        }
+
+        .tamerg input:hover {
+            border-bottom: 5px solid #0057B8;
+        }
+
+        body {
+            background-image: url(st.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .news {
+            position: absolute;
+            right: 119px;
+            top: 356px;
+            color: white;
+            background: linear-gradient(135deg, #0057B8 50%, gainsboro 50%);
+            height: 584px;
+            width: 450px;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .newsimg {
+            position: absolute;
+            right: 182px;
+            top: 616px;
+            border: 2px solid black;
+        }
+
+        .newstext {
+            background: linear-gradient(45deg, black, red);
+            padding: 10px;
+            padding-left: 17px;
+            border-radius: 20px;
+            width: 40px;
+            font-size: 45%;
+
+        }
+
+        .p1 {
+            color: gainsboro;
+            position: absolute;
+            top: 60px;
+            margin: 20px 10px 0;
+            font-size: 65%;
+            background-color: black;
+            border-radius: 20px;
+            padding: 10px;
+            border: 1px solid gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brphoto">
+        <img src="https://upload.wikimedia.org/wikipedia/ar/f/fd/Brighton_%26_Hove_Albion_logo.svg"
+            alt="Your browser does not support the image" height="100px" width="100px">
+    </div>
+    <div class="discord">
+        <a href="https://discord.gg/UEuKGaTjwA" title="Go To Discord" target="_blank">
+            <img src="discord.png" alt="" width="90px" height="90px">
+        </a>
+    </div>
+    <h1 class="brh1">Brighton Hub</h1>
+
+    <div class="captin-container">
+        <div class="captin">
+            <label for="captain">Captin Now:</label>
+            <input type="text" id="captain" name="Gedo" placeholder="Gedo">
+        </div>
+        <div class="players">
+            <h1>Players:</h1>
+        </div>
+        <div class="atk">
+            <h1>Attackers:</h1>
+        </div>
+        <div class="def">
+            <h1>Defenders:</h1>
+        </div>
+        <div class="gk">
+            <h1>Goalkeepers:</h1>
+        </div>
+
+        <div class="tamer">
+            <label class="tm" for="">Mohamed10</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="1">
+            <input type="number" min="0" class="assists" data-player="1">
+            <input type="number" min="0" class="matches" data-player="1">
+        </div>
+
+        <div class="den">
+            <label class="den1" for="">Dentrex</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="2">
+            <input type="number" min="0" class="assists" data-player="2">
+            <input type="number" min="0" class="matches" data-player="2">
+        </div>
+
+        <div class="sto">
+            <label class="sto1" for="">Storm</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="3">
+            <input type="number" min="0" class="assists" data-player="3">
+            <input type="number" min="0" class="matches" data-player="3">
+        </div>
+
+        <div class="tamer14">
+            <label for="">Reaperx</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="CleanSheet" data-player="4">
+            <input type="number" min="0" class="goals" data-player="4">
+            <input type="number" min="0" class="assists" data-player="4">
+            <input type="number" min="0" class="matches" data-player="4">
+        </div>
+
+        <div class="tamer13">
+            <label for="">Rusk</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="CleanSheet" data-player="5">
+            <input type="number" min="0" class="goals" data-player="5">
+            <input type="number" min="0" class="assists" data-player="5">
+            <input type="number" min="0" class="matches" data-player="5">
+        </div>
+
+        <div class="tamer12">
+            <label for="">Gedo</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="CleanSheet" data-player="6">
+            <input type="number" min="0" class="goals" data-player="6">
+            <input type="number" min="0" class="assists" data-player="6">
+            <input type="number" min="0" class="matches" data-player="6">
+        </div>
+
+        <div class="tamer1">
+            <label for="">BedoSaeed</label>
+            <br>
+            <label for="">Goals</label>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="CleanSheet" data-player="7">
+            <input type="number" min="0" class="goals" data-player="7">
+            <input type="number" min="0" class="assists" data-player="7">
+            <input type="number" min="0" class="matches" data-player="7">
+        </div>
+
+        <div class="tamer2">
+            <label for="">Juliard</label>
+            <br>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="8">
+            <input type="number" min="0" class="assists" data-player="8">
+            <input type="number" min="0" class="matches" data-player="8">
+        </div>
+
+        <div class="tamerb">
+            <label for="">Bursz</label>
+            <br>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="9">
+            <input type="number" min="0" class="assists" data-player="9">
+            <input type="number" min="0" class="matches" data-player="9">
+        </div>
+
+        <div class="tamerg">
+            <label for="">Amoz</label>
+            <br>
+            <label for="">CleanSheet</label>
+            <label for="">Assists</label>
+            <label for="">Matches</label>
+            <br>
+            <input type="number" min="0" class="goals" data-player="10">
+            <input type="number" min="0" class="assists" data-player="10">
+            <input type="number" min="0" class="matches" data-player="10">
+        </div>
+        <nav>
+            <div class="news">
+                <h1 class="newstext">News:</h1>
+                <p class="p1">نودع حقبة قيدمة ونبدأ في امال وسعي جديد مرة أخري
+
+                    رحبوا معنا بمدربنا الجديد Gedo 🤩 🔥 ومن الأن يتولي جميع امور الفريق 😄
+
+                    نتمني له التوفيق في رحلته هذا الأسبوع! ♥️
+
+                    Welcome with us our new coach Gedo 🤩 🔥 And from now on he will be in charge of all team affairs 😄
+
+                    We wish him good luck on his trip this week!</p>
+            </div>
+            <img class="newsimg" width="350px"
+                src="https://cdn.discordapp.com/attachments/1288965559836479509/1294686996270153800/e49db5672f20dsabdf5ac5e0b24dsfdsfsda820ed3f8.png?ex=670f367a&is=670de4fa&hm=8254ab7b812cc883542297777acbc2a55c592b9350ef5b7d5a63e628020ec83c&"
+                alt="">
+        </nav>
+    </div>
+
+    <script>
+        // Function to save data to localStorage
+        function saveData() {
+            const captainName = document.getElementById('captain').value;
+            localStorage.setItem('captainName', captainName);
+
+            const inputs = document.querySelectorAll('.tamer input, .den input, .sto input, .tamer1 input, .tamer2 input, .tamer14 input, .tamer13 input, .tamer12 input, .tamerb input, .tamerg input');
+            inputs.forEach(input => {
+                const playerIndex = input.dataset.player;
+                localStorage.setItem(`${input.className}_${playerIndex}`, input.value);
+            });
+        }
+
+        // Load data from localStorage when the page loads
+        window.onload = function () {
+            const storedCaptain = localStorage.getItem('captainName');
+            if (storedCaptain) {
+                document.getElementById('captain').value = storedCaptain;
+            }
+
+            const inputs = document.querySelectorAll('.tamer input, .den input, .sto input, .tamer1 input, .tamer2 input, .tamer14 input, .tamer13 input, .tamer12 input, .tamerb input, .tamerg input');
+            inputs.forEach(input => {
+                const playerIndex = input.dataset.player;
+                const value = localStorage.getItem(`${input.className}_${playerIndex}`);
+                if (value) {
+                    input.value = value;
+                }
+            });
+        };
+
+        // Save data when input values change
+        document.querySelectorAll('.tamer input, .den input, .sto input, .tamer1 input, .tamer2 input, .tamer14 input, .tamer13 input, .tamer12 input, .tamerb input, .tamerg input').forEach(input => {
+            input.addEventListener('input', saveData);
+        });
+
+        // Save captain name when it changes
+        document.getElementById('captain').addEventListener('input', saveData);
+    </script>
+
+</body>
+
+</html>
